@@ -32,8 +32,8 @@
                     width: 80px;
                     height: 80px;
                     @include mobile{
-                        width: 70px;
-                        height: 70px;
+                        width: 60px;
+                        height:60px;
                     }
                     a{
                         position: relative;
@@ -60,6 +60,9 @@
                             @include flex(center,center);
                             opacity: 0;
                             transition: 0.3s ease;
+                            @include mobile{
+                                font-size: 13px;
+                            }
                         }
                         .text::before{
                             content: '';
@@ -70,6 +73,9 @@
                             z-index: -1;
                             border-radius: 10px;
                             transition: 0.3s ease;
+                            @include mobile{
+                                width: 120%;
+                            }
                         }
                         
                     }

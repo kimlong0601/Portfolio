@@ -10,7 +10,7 @@ const web = [
         demo: 'https://x-plus-toys.vercel.app/'
     },
     {
-        name: 'Movie+ Website Responsive',
+        name: 'Movie Website Responsive',
         img: p2,
         source: 'https://github.com/kimlong0601/movie-',
         demo: 'https://movie-ebon-nine.vercel.app/'

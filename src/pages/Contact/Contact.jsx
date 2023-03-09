@@ -19,7 +19,7 @@ const Contact = () => {
 
     emailjs.sendForm('service_24ox32l', 'template_77d0cnm', form.current, 'W9PbEU_EJLvyrpmW2')
       .then((result) => {
-          alert('Your email have been sent! I will contact as soon as possible. Thank you for your time')
+          alert('Your email has been sent! I will contact as soon as possible. Thank you for your time')
           console.log(result.text);
       }, (error) => {
           console.log(error.text);

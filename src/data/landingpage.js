@@ -5,7 +5,7 @@ import vreality from '../assets/images/project_6.png';
 import berotot from '../assets/images/project_8.png';
 const landingpage = [
     {
-        name: 'DKR Real Estate Landing Page',
+        name: 'Real Estate Landing Page',
         img: DKR,
         source: 'https://github.com/kimlong0601/dkr',
         demo: 'https://kimlong0601.github.io/dkr/'
