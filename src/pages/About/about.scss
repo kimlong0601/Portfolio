@@ -1,0 +1,133 @@
+@use '../../sass/' as *;
+.about{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    @include tablet{
+        height: auto;
+    }
+    @include mobile{
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        @include tablet{
+            width: 100%;
+        }
+        .row{
+            @include flex(center,space-between);
+            width: 100%;
+            height: 100%;
+            color: $white;
+            padding-bottom: 50px;
+            @include tablet{
+                width: 100%;
+            }
+            .about-image{
+                width: 100%;
+                height: 480px;
+                position: relative;
+                z-index: 2;
+                // border: 5px solid $main-color;
+                @include mobile{
+                    width: 100%;
+                    height: 400px;
+                    margin-bottom: 30px;
+                    border: 4px solid $main-color;
+                    padding: 5px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;          
+                }
+                
+            }
+            .about-image::before{
+                content: '';
+                position: absolute;
+                bottom: -5%;
+                left: -5%;
+                width: 90%;
+                height: 100%;
+                border: 6px solid $main-color;
+                z-index: -1;
+                @include mobile{
+                    display: none;
+                }
+            }
+            .about-detail{
+                width: 100%;
+                height: 100%;
+                h1{
+                    font-weight: 600;
+                    span{
+                        animation: neon 2s ease infinite
+                    }
+                }
+                .detail{
+                    margin: 25px 0;
+                }
+                ul{
+                    width: 100%;
+                    li{
+                        @include flex(flex-start,space-between);
+                        
+                        span{
+                            font-weight: 700;
+                            
+                        }
+                        @include mobile{
+                            width: 100%;
+                        }
+                        
+                    }
+                }
+                &__btn{
+                    position: relative;
+                    width: 160px;
+                    height: 50px;
+                    background-color: $main-color;
+                    outline: none;
+                    border: none;
+                    border-radius: 50px;
+                    color: $white;
+                    overflow: hidden;
+                }
+                &__btn::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, #fff, transparent);
+                    transition: 0.4s;
+                }
+                &__btn:hover::before{
+                    left: 100%;
+                }
+            }
+       }
+    }
+}
+
+
+
+
+
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px $main-color, 0 0 20px $main-color, 0 0 20px $main-color, 0 0 20px $main-color, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: $main-color;
+    }
+}

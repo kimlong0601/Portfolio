@@ -1,0 +1,98 @@
+@use '../../sass/' as *;
+
+.header{
+    position: fixed;
+    bottom: 1%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    @include mobile{
+        width: 100%
+    }
+    .header-container{
+        @include flex(center,center);
+        nav{
+            width: 480px;
+            height: 80px;
+            position: relative;
+            background-color: $header-bg;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            @include mobile{
+                width: 100%;
+            }
+            ul{
+                width: 100%;
+                position: relative;
+                display: flex;
+                li{
+                    position: relative;
+                    list-style: none;
+                    width: 80px;
+                    height: 80px;
+                    @include mobile{
+                        width: 70px;
+                        height: 70px;
+                    }
+                    a{
+                        position: relative;
+                        @include flex(center,center);
+                        flex-direction: column;
+                        text-align: center;
+                        width: 100%;
+                        font-weight: 500;
+                        .icon{
+                            position: relative;
+                            display: block;
+                            line-height: 85px;
+                            font-size: 1.5rem;
+                            transition: 0.5s;
+                            text-align: center;
+                            color: $white;
+                        }
+                        .text{
+                            position: absolute;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            color: $white;
+                            transform: translateY(0);
+                            @include flex(center,center);
+                            opacity: 0;
+                            transition: 0.3s ease;
+                        }
+                        .text::before{
+                            content: '';
+                            position: absolute;
+                            width: 150%;
+                            height: 30px;
+                            background-color: $main-color;
+                            z-index: -1;
+                            border-radius: 10px;
+                            transition: 0.3s ease;
+                        }
+                        
+                    }
+                    a:hover .icon{
+                        color: $main-color;
+                    }
+                
+                    
+                    &.active{
+                        .icon{
+                            color: $main-color;
+                            transform: translateY(-12px);
+                            transition: 0.3s ease;
+                        }
+                        .text{
+                            opacity: 1;
+                            transform: translateY(20px);
+                            transition: 0.3s ease;
+                        }
+                    }
+                }
+               
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: $font-size-default;
+}
+body{
+    font-family: $font-family;
+    background-color: $main-bg;
+    color: $white;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+input,button{
+    outline: none;
+}

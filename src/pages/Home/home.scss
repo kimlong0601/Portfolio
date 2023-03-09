@@ -1,0 +1,126 @@
+@use '../../sass/' as *;
+
+.banner{
+    color: $white;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    @include mobile{
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 90px;
+    }
+    .container{
+        height: 100%;
+        .row{
+            width: 100%;
+            height: 100%;
+            .title{
+    
+                font-size: $font-size-medium;
+                text-transform: uppercase;
+                font-weight: 600;
+                span{
+                    color: $main-color;
+                }
+            }
+            .animated-typing{
+                font-size: $biggest-font-size;
+                font-weight: 700;
+            }
+            img{
+                width: 100%;
+                height: 580px;
+                animation: animate 5s ease-in-out infinite;
+                background-color: $header-bg;
+                border: 3px solid $main-color;
+                @include mobile{
+                    width: 100%;
+                    height: 400px;
+                    margin-top: 10px;
+                }
+            }
+            .detail{
+                width: 450px;
+                margin: 20px 0;
+                @include tablet{
+                    width: 100%;
+                }
+            }
+            .banner-btn{
+                position: relative;
+                width: 160px;
+                padding: 10px;
+                border-radius: 50px;
+                background-color: $main-color;
+                outline: none;
+                border: none;
+                text-transform: uppercase;
+                color: $white;
+                box-shadow: $box-shadow;
+                overflow: hidden;
+                transition: 0.3s;
+                margin-bottom: 25px;
+            }
+            .banner-btn::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, #fff, transparent);
+                transition: 0.4s;
+            }
+            .banner-btn:hover{
+                font-weight: 700;
+                transition: 0.4s;
+            }
+            .banner-btn:hover::before{
+                left: 100%;
+            }
+            .banner-icons{
+                display: flex;
+                gap: 0 10px;
+                .icon{
+                    width: 40px;
+                    height: 40px;
+                    background-color: $main-color;
+                    @include flex(center,center);
+                    border-radius: 50px;
+                    text-decoration: none;
+                    color: $white;
+                    transition: 0.4s;
+                    box-shadow: $box-shadow;
+                    i{
+                        font-size: 24px;
+                    }
+                }
+                .icon:hover{
+                    background-color: $white;
+                    color: $main-color;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    25% { 
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75%{
+        border-radius: 50% 60% 80% 70%/60% 40% 50% 70%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
