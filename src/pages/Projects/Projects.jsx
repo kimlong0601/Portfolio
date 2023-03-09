@@ -41,7 +41,7 @@ const Projects = () => {
                             key={index}
                             img={item.img}
                             name={item.name}
-                            github={item.github}
+                            source={item.source}
                             demo={item.demo}
                           />
                         ))
@@ -56,7 +56,7 @@ const Projects = () => {
                               key={index}
                               img={item.img}
                               name={item.name}
-                              github={item.github}
+                              source={item.source}
                               demo={item.demo}
                             />
                           ))
@@ -71,7 +71,7 @@ const Projects = () => {
                               key={index}
                               img={item.img}
                               name={item.name}
-                              github={item.github}
+                              source={item.source}
                               demo={item.demo}
                             />
                           ))
