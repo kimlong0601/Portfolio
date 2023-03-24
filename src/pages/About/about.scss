@@ -97,6 +97,7 @@
                     border-radius: 50px;
                     color: $white;
                     overflow: hidden;
+                    box-shadow: $box-shadow;
                 }
                 &__btn::before{
                     content: '';

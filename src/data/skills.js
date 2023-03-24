@@ -8,7 +8,7 @@ import bootstrap from '../assets/images/bootstrap.png';
 import git from '../assets/images/git.png';
 import github from '../assets/images/github.png';
 import photoshop from '../assets/images/photoshop.png';
-
+import figma from '../assets/images/figma.png';
 
 const skills = [
     {
@@ -42,6 +42,10 @@ const skills = [
     {
         img: photoshop,
         name: 'photoshop'
+    },
+    {
+        img: figma,
+        name: 'figma'
     },
 ];
 

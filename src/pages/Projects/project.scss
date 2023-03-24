@@ -4,7 +4,6 @@
     width: 100%;
     height: auto;
     position: relative;
-    text-align: center;
     .container{
         height: 100%;
         .row{
@@ -15,6 +14,7 @@
                 padding-top: 20px;
             }
             h1{
+                text-align: center;
                 span{
                     animation: neon 2s ease infinite;
                 }
@@ -68,7 +68,7 @@
             }
             .project-card{
                 width: 100%;
-                padding-bottom: 15px;
+                padding-bottom: 20px;
                 box-shadow: $main-box-shadow;
                 margin: 5px 0;
                 background-color: $header-bg;
@@ -80,6 +80,8 @@
                     }
                 }
                 &__title{
+                    width: 100%;
+                    text-align: center;
                     margin-top: 15px;
                     margin-bottom: 20px;
                     @include mobile{
@@ -87,6 +89,11 @@
                     }
                 }
                 &__detail{
+                    padding: 0 15px;
+                    span{
+                        font-weight: 900;
+                        color: $white;
+                    }
                     @include mobile{
                         padding: 0 5px;
                         display: none;
@@ -94,55 +101,74 @@
                 }
                 &__link{
                     width: 100%;
-                    .btn-demo, .btn-link{
+                    @include flex(center,center);
+                    padding: 0 5px;
+                    @include mobile{
+                        flex-direction: column;
+                    }
+                    a{
                         width: 45%;
-                        height: 50px;
-                        border-radius: 25px;
-                        border: none;
-                        outline: none;
-                        text-decoration: none;
-                        color: $white;
                         @include mobile{
-                            width: 80%;
-                            height: 40px;
-                            margin-bottom: 5px;
+                            width: 100%;
+                        }
+                        .btn-demo, .btn-link{
+                            width: 100%;
+                            height: 50px;
+                            border-radius: 25px;
+                            border: none;
+                            outline: none;
+                            text-decoration: none;
+                            color: $white;
+                            @include mobile{
+                                width: 100%;
+                                height: 40px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        .btn-demo{
+                            
+                            background-color: $main-color;
+                            position: relative;
+                            overflow: hidden;
+                            transition: 0.3s;
+                            box-shadow: $box-shadow;
+                        }
+                        .btn-demo::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(90deg, transparent, #fff, transparent);
+                            transition: 0.4s;
+                        }
+                        .btn-demo:hover{
+                            font-weight: 700;
+                            transition: 0.3s;
+                        }
+                        .btn-demo:hover::before{
+                            left: 100%;
+                        }
+                        .btn-link{
+                            background: none;
+                            border: 1px solid $white;
+                            transition: 0.3s ease-in-out;
+                        }
+                        .btn-link:hover{
+                            background: $white;
+                            color: $main-color;
+                            font-weight: 700;
+                            transition: 0.3s ease-in-out;
+                            border: 2px solid $main-color;
                         }
                     }
-                    .btn-demo{
-                        margin-right: 6px;
-                        background-color: $main-color;
-                        position: relative;
-                        overflow: hidden;
-                        transition: 0.3s;
-                    }
-                    .btn-demo::before{
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: -100%;
-                        width: 100%;
-                        height: 100%;
-                        background: linear-gradient(90deg, transparent, #fff, transparent);
-                        transition: 0.4s;
-                    }
-                    .btn-demo:hover{
-                        font-weight: 700;
-                        transition: 0.3s;
-                    }
-                    .btn-demo:hover::before{
-                        left: 100%;
-                    }
-                    .btn-link{
-                        background: none;
-                        border: 1px solid $white;
-                        transition: 0.3s ease-in-out;
-                    }
-                    .btn-link:hover{
-                        background: $white;
-                        color: $main-color;
-                        font-weight: 700;
-                        transition: 0.3s ease-in-out;
-                        border: 2px solid $main-color;
+                    a:nth-child(1){
+                        margin-right: 10px;
+                        @include mobile{
+                            margin-bottom: 7px;
+                            margin-right: 0;
+                        }
                     }
                 }
 

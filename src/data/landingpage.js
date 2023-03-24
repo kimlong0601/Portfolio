@@ -7,30 +7,35 @@ const landingpage = [
     {
         name: 'Real Estate Landing Page',
         img: DKR,
+        detail: 'DRK - Real Estate Landing Page from Photoshop (no-responsive)',
         source: 'https://github.com/kimlong0601/dkr',
         demo: 'https://kimlong0601.github.io/dkr/'
     },
     {
         name: 'RP Decorate Landing Page',
         img: rp,
+        detail: 'RP - A decorate house landing Page from figma (responsive)',
         source: 'https://github.com/kimlong0601/RpLandingPage',
         demo: 'https://kimlong0601.github.io/RpLandingPage/'
     },
     {
         name: 'Foodlink Landing Page',
         img: foodlink,
+        detail: 'Foodlink - A food store landing page self-designed (responsive)',
         source: 'https://github.com/kimlong0601/Foodlink',
         demo: 'https://kimlong0601.github.io/Foodlink/'
     },
     {
         name: 'VREALITY Landing Page',
         img: vreality,
+        detail: 'VREALITY - A vr center landing page from figma (responsive)',
         source: 'https://github.com/kimlong0601/VREALITY',
         demo: 'https://kimlong0601.github.io/VREALITY/'
     },
     {
         name: 'Berotot Gym Landing Page',
         img: berotot,
+        detail: 'Berotot - A gymnasium landing page self-designed (responsive)',
         source: 'https://github.com/kimlong0601/BEROTOT-GYM',
         demo: 'https://kimlong0601.github.io/BEROTOT-GYM/'
     },

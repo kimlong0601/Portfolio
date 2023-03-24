@@ -11,9 +11,11 @@ const ProjectCard = props => {
             <h5 className="project-card__title">
                 {props.name}
             </h5>
-            <p className="project-card__detail">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
+            <div className="project-card__detail">
+                <p><span>Size: </span>{props.size}</p>
+                <p><span>Technology used: </span>{props.technology}</p>
+                <p><span>Goal: </span>{props.detail}</p>
+            </div>
             <div className="project-card__link">
                 <a href={props.demo}>
                     <button className='btn-demo'>

@@ -43,6 +43,9 @@ const Projects = () => {
                             name={item.name}
                             source={item.source}
                             demo={item.demo}
+                            size={item.size}
+                            technology={item.technology}
+                            detail={item.detail}
                           />
                         ))
                       }
@@ -58,6 +61,7 @@ const Projects = () => {
                               name={item.name}
                               source={item.source}
                               demo={item.demo}
+                              detail={item.detail}
                             />
                           ))
                         }

@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 import about_image from '../../assets/images/e35344d7ef62003c5973.jpg';
 import './about.scss';
+import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <div className="about">
@@ -43,7 +44,9 @@ const About = () => {
                     <p>+84373380709</p>
                 </li>
               </ul>
-              <button className='about-detail__btn'>Contact Me</button>
+              <Link to='/contact'>
+                <button className='about-detail__btn'>Contact Me</button>
+              </Link>
             </div>
           </Col>
         </Row>
