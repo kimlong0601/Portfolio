@@ -56,12 +56,14 @@ const Projects = () => {
                         {
                           landingpage.map((item,index) => (
                             <ProjectCard
-                              key={index}
-                              img={item.img}
-                              name={item.name}
-                              source={item.source}
-                              demo={item.demo}
-                              detail={item.detail}
+                            key={index}
+                            img={item.img}
+                            name={item.name}
+                            source={item.source}
+                            demo={item.demo}
+                            size={item.size}
+                            technology={item.technology}
+                            detail={item.detail}
                             />
                           ))
                         }
@@ -72,11 +74,14 @@ const Projects = () => {
                         {
                           design.map((item,index) => (
                             <ProjectCard
-                              key={index}
-                              img={item.img}
-                              name={item.name}
-                              source={item.source}
-                              demo={item.demo}
+                            key={index}
+                            img={item.img}
+                            name={item.name}
+                            source={item.source}
+                            demo={item.demo}
+                            size={item.size}
+                            technology={item.technology}
+                            detail={item.detail}
                             />
                           ))
                         }

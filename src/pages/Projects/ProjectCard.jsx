@@ -14,7 +14,7 @@ const ProjectCard = props => {
             <div className="project-card__detail">
                 <p><span>Size: </span>{props.size}</p>
                 <p><span>Technology used: </span>{props.technology}</p>
-                <p><span>Goal: </span>{props.detail}</p>
+                <p><span>Detail: </span>{props.detail}</p>
             </div>
             <div className="project-card__link">
                 <a href={props.demo}>
